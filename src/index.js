@@ -13,8 +13,8 @@ app.use(bodyParser.json())
 app.use('/medicine', routes.medicine)
 app.use('/manufacturer', routes.manufacturer)
 
-// start listening for requests 
-const PORT = process.env.PORT || 8000
+// start listening for requests
+const PORT = process.env.PORT
 app.listen(PORT, err => {
   if (err) {
     // log err to external service...
@@ -23,6 +23,5 @@ app.listen(PORT, err => {
 
   // attempt connection to db
   require('./utils/db') 
-
   console.log(`listening on :${PORT}`)
 })

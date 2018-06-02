@@ -13,6 +13,6 @@ RUN npm install
 COPY . .
 
 # Expose port so it is mapped by Docker daemon
-EXPOSE 8080 9229
+EXPOSE 8000 9229
 
 CMD [ "npm", "start" ]

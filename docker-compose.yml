@@ -2,19 +2,23 @@ version: '3'
 
 services:
   api:
+    container_name: api
     build: .
-    env_file: .env
     ports:
       - "8000:8000"
     depends_on:
+      - db
+    links:
       - db
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     environment:
-      - DATABASE_URL=mongodb://db:27017
+      - PORT=8000
+      - DATABASE_URL=mongodb://db
 
   db:
+    container_name: db
     image: mongo
     ports:
       - "27017:27017"
