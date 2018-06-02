@@ -24,4 +24,4 @@ cd viratrak-interview
 docker-compose up
 ```
 
-4. The API is available at `localhost:8000`
+4. The API is available at `http://localhost:8000`

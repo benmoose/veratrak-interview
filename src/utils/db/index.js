@@ -1,9 +1,12 @@
 const mongoose = require('mongoose')
 
-// connect to db
+// attempt to connect to mongo
+console.log('connecting to mongodb...')
 mongoose.connect(process.env.DATABASE_URL)
+  .then(() => console.log('mongodb connected 👌'))
+  // on error normally would log to external service
+  // in this simple case, though, simply print to stderr
   .catch((err) => {
-    // log to external service
-    console.error(err)
+    console.error('error connecting to mongodb', err)
     process.exit(1)
   })
