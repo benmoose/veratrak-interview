@@ -1,8 +1,5 @@
-const mongoose = require('mongoose')
-const { medicine, manufacturer } = require('../schema')
-
-const Medicine = mongoose.model('Medicine', medicine)
-const Manufacturer = mongoose.model('Manufacturer', manufacturer)
+const Medicine = require('./medicine')
+const Manufacturer = require('./manufacturer')
 
 module.exports = {
   Medicine,

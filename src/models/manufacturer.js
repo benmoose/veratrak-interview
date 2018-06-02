@@ -4,7 +4,7 @@ const timestamps = require('mongoose-timestamp')
 /**
  * Medicine model.
  */
-const manufacterer = mongoose.Schema({
+const schema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   name: {
     type: String,
@@ -15,6 +15,7 @@ const manufacterer = mongoose.Schema({
 })
 
 // adds `updatedAt` and `createdAt` on save
-medicine.plugin(timestamps)
+schema.plugin(timestamps)
 
-module.exports = medicine
+// export model
+module.exports = mongoose.model('Manufacturer', schema)

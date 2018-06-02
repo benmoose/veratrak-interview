@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 // add medicine endpoints
-app.use('/medicines', routes.medicine)
+app.use('/medicine', routes.medicine)
 app.use('/manufacturer', routes.manufacturer)
 
 // start listening for requests 
