@@ -2,7 +2,6 @@ version: '3'
 
 services:
   api:
-    container_name: api
     build: .
     ports:
       - "8000:8000"
@@ -18,7 +17,6 @@ services:
       - DATABASE_URL=mongodb://db
 
   db:
-    container_name: db
     image: mongo
     ports:
       - "27017:27017"
