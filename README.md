@@ -60,7 +60,7 @@ Request
 ```json
 POST /manufacturer
 {
-  name: "Pharmacorp"  // name of manufacturer
+  "name": "Pharmacorp"
 }
 ```
 
@@ -90,7 +90,13 @@ Response
 HTTP 200
 [
   {
-    ...
+    "__v": 0,
+    "_id": "5b12bdb94ef6ff0010cefe18",
+    "createdAt": "2018-06-02T15:54:33.932Z",
+    "manufacturer": "5b12bb594ef6ff0010cefe17",
+    "name": "jellybean",
+    "stockLevel": 42,
+    "updatedAt": "2018-06-02T15:54:33.932Z"
   }
 ]
 ```
@@ -100,9 +106,9 @@ Request
 ```json
 POST /medicine
 {
-  manufacturer: "5b12bb594ef6ff0010cefe17"  // id of the manufacturer
-  name: "jellybean"  // name of the medicine
-  stockLevel: 42  // number of items in stock (should be a positive integer)
+  "manufacturer": "5b12bb594ef6ff0010cefe17",
+  "name": "jellybean",
+  "stockLevel": 42
 }
 ```
 
